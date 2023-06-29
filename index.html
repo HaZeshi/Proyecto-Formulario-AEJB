@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Sistema Diagostico</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Titulo  Sistema Diagnóstico -->
+    <div class="container">
+        <div class="my-3"><h1>Sistema Diagnostico</h1></div>
+    </div>
+    <!--Modals -->
+    <div class="container">
+    <!--Modal Datos del Cliente-->
+    <div class="container">
+        <div class="row">
+            <div class="col-6 d-grid">
+                <div class=" redondeado " style="background-color: rgb(152, 211, 253);">
+                    <h4 class="mx-auto " style="width: 200px;">Datos Del Cliente</h4>
+                </div>
+            </div>
+            <div class="col-6 d-grid ">
+                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#datosCliente">
+                    Ingresar Datos
+                </button>
+                <div class="modal fade" id="datosCliente" tabindex="-1" aria-labelledby="labelModalDatos" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="labelModalDatos">BLOQUE 1</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="container">
+                                <div class=" px-3 redondeado" style="background-color: rgb(152, 211, 253);">
+                                    <h5 class="mx-auto" style="width: 250px;">Proporcione sus datos:</h5>
+                                </div>
+                                <form id="datosCliente" class="needs-validation" validate>
+                                    <div class="row">
+                                        <div class="col">
+                                            <label class="form-label" for="clienteEmail">Email:</label>
+                                            <input class="form-control" type="text" name="clienteEmail" id="clienteEmail" required>
+                                        </div>
+                                        <div class="col">
+                                            <label class="form-label" for="empresa">Empresa</label>
+                                            <input class="form-control" type="text" name="empresa" id="empresa" required>
+                                        </div>
+                                    </div>
+                                    <div class="row my-2">
+                                        <div class="col">
+                                            <label class="form-label" for="nombre">Nombre</label>
+                                            <input class="form-control" type="text" name="nmbre" id="nombre" required>
+                                        </div>
+                                        <div class="col">
+                                            <label class="form-label" for="apellido">Apellido</label>
+                                            <input class="form-control" type="text" name="apellido" id="apellido" required>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <label class="form-label" for="telefono">Telefono</label>
+                                            <input class="form-control" type="text" name="telefono" id="telefono" required>
+                                        </div>
+                                        <div class="col">
+                                            <label class="form-label" for="giro">Giro</label>
+                                            <input class="form-control" type="text" name="giro" id="giro" required>
+                                        </div>
+                                    </div>
+                                    <div class="d-grid gap-2 col-6 mx-auto mt-4">
+                                        <button type="submit" class="btn btn-outline-primary">Enviar</button>  
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row my-3">
+            <div class="col">
+                <div id="datosEmail"></div>
+                <div id="datosNombre" ></div>
+                <div id="datosTelefono" ></div>
+            </div>
+            <div class="col">
+                <div id="datosEmpresa" ></div>
+                <div id="datosApellido" ></div>
+                <div id="datosGiro" ></div>
+            </div>  
+        </div>
+    </div>
+    <!--Modal Bloque 1-->
+    <div class="container">
+        <div class="row mt-4">
+            <div class=" redondeado px-3" style="background-color: rgb(152, 211, 253);">
+                <h4>BLOQUE 1 Resumen ejecutivo de la empresa</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-7">
+                    <h5 class="px-3">En esta sección haremos preguntas sobre la información general de su empresa.</h5>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-outline-primary my-2" data-bs-toggle="modal" data-bs-target="#modalB1">
+                    Responder
+                </button>
+                <div class="modal fade" id="modalB1" tabindex="-1" aria-labelledby="labelModalB1" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="labelModalB1">BLOQUE I</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="datosBloqueI" validate>
+                                <div class="row">
+                                    <div class="col">
+                                        <div>¿Tiene definido los OBJETIVOS de su empresa?</div>
+                                            <label class="form-label" for="pregUnoA"></label>
+                                            <select class="form-select" name="pregUnoA" id="pregUnoA" required>
+                                                <option selected disabled value disabled value=""> Seleccione Respuesta</option>
+                                                <option value="20">SI</option>
+                                                <option value="0">NO</option>
+                                                <div class="invalid-feedback">
+                                                    Please select a valid state.
+                                                </div>
+                                            </select>
+                                        </div>
+                                    <div class="col">
+                                        <div>¿Tiene definida la MISIÓN de su empresa?</div>
+                                        <label class="form-label" for="pregDosA"></label>
+                                        <select class="form-select" name="pregDosA" id="pregDosA" required>
+                                            <option selected disabled value disabled value="">Seleccione Respuesta</option>
+                                            <option value="20">SI</option>
+                                            <option value="0">NO</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row my-3">
+                                    <div class="col">
+                                        <div>¿Tiene definida la VISIÓN de su empresa?</div>
+                                        <label class="form-label" for="pregTresA"></label>
+                                        <select class="form-select" name="pregTresA" id="pregTresA" required>
+                                            <option selected disabled value disabled value="">Seleccione Respuesta</option> 
+                                            <option value="20">SI</option>
+                                            <option value="0">NO</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <div>¿Cuenta con el ORGANIGRAMA de su empresa?</div>
+                                        <label class="form-label" for="pregCuatroA"></label>
+                                        <select class="form-select" name="pregCuatroA" id="pregCuatroA" required>
+                                                <option selected disabled value disabled value="">Seleccione Respuesta</option>
+                                                <option value="20">SI</option>
+                                                <option value="0">NO</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row mb-4"> 
+                                    <div class="col">
+                                        <div>¿Tiene ASESORES EXTERNOS?</div>
+                                        <label class="form-label" for="pregCincoA"></label>
+                                        <select class="form-select" name="pregCincoA" id="pregCincoA" required>
+                                            <option selected disabled value disabled value="">Seleccione Respuesta</option>
+                                            <option value="7">SI</option>
+                                            <option value="0">NO</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <div>¿Cuenta con dos o más PROPIETARIOS y/o ACCIONISTAS?</div>
+                                        <label class="form-label" for="pregSeisA"></label>
+                                        <select class="form-select" name="pregSeisA" id="pregSeisA" required>
+                                            <option selected disabled value disabled value="">Seleccione Respuesta</optio>
+                                            <option value="13">SI</option>
+                                            <option value="0">NO</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="d-grid gap-2 col-6 mx-auto mt-4">
+                                    <button type="submit" class="btn btn-outline-primary">Enviar</button>  
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>  
+            <div class="col-2">
+                <div id="respuestaBloque1"></div>
+            </div>
+        </div>
+    </div>
+    <!--Modal Bloque 2-->
+    <div class="container">
+        <div class="row mt-4">
+            <div class="redondeado px-3" style="background-color: rgb(152, 211, 253);">
+                <h4> BLOQUE 2 Historia y situación actual</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-7">
+                <h5 class="px-3">En esta sección haremos preguntas sobre los antecedentes históricos de su empresa.</h5>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-outline-primary my-2" data-bs-toggle="modal" data-bs-target="#modalB2">
+                    Responder
+                </button>
+                <div class="modal fade" id="modalB2" tabindex="-1" aria-labelledby="labelModalB2" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="labelModalB2">BLOQUE 2</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="datosBloqueII" validate>
+                                    <div class="row">
+                                        <div class="col mt-2">
+                                            <label for="pregUnoB" class="mb-4">¿Cuál es su FACTURACIÓN aproximada mensual?</label> 
+                                            <select class="form-select" name="pregUnoB" id="pregUnoB" required>
+                                                <option selected disabled value>Seleccione Cantidad</option>
+                                                <option value="45">Más de $999,999.00 MXN</option>
+                                                <option value="25">Más de $500,000.00 MXN </option>
+                                                <option value="15">Más de $99,000.00 MXN</option>
+                                                <option value="0">Menos de $99,000.00 MXN</option>
+                                            </select>
+                                        </div>
+                                    <div class="col">
+                                        <label class="form-label" for="pregDosB">¿Cuenta con información de sus COSTOS mensual, anual o de más de un año?</label>
+                                            <select class="form-select" name="pregDosB" id="pregDosB" required>
+                                                <option selected disabled value>Seleccione Respuesta</option>
+                                                <option value="30">SI</option>
+                                                <option value="0">NO</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row my-3">
+                                        <div class="col mx-6">
+                                            <label class="form-label" for="pregTresB">¿A qué SECTOR pertenece tu empresa?</label>
+                                            <select class="form-select" name="pregTresB" id="pregTresB" required>
+                                                <option selected disabled value>Seleccione Respuesta</option>
+                                                <option value="25">Sector Primario</option>
+                                                <option value="25">Sector Secundario</option>
+                                                <option value="25">Sector Terciario</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="d-grid gap-2 col-6 mx-auto mt-4">
+                                    <button type="submit" class="btn btn-outline-primary">Enviar</button>  
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div id="respuestaBloque2"></div>
+            </div>
+        </div>
+    </div>
+    <!--Modal Bloque 3-->
+    <div class="container">
+        <div class="row mt-4">
+            <div class="redondeado" style="background-color: rgb(152, 211, 253); ">
+                <h4 class="mx-3">BLOQUE 3 Situación estratégica y acceso a tecnología</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-7">
+                <h5 class="px-3">En esta sección haremos preguntas sobre el estado tecnológico actual de su empresa.</h5> 
+            </div>
+            <div class="col-3">
+                <button class="btn btn-outline-primary my-2" data-bs-toggle="modal" data-bs-target="#modalB3">
+                    Responder
+                </button>
+                <div class="modal fade" id="modalB3" tabindex="-1" aria-labelledby="labelModalB3" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="labelModalB3">BLOQUE 3</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="datosBloqueIII" validated>
+                                    <div class="row">
+                                        <div class="col">
+                                            <p>¿Cuenta con alguna de las siguientes herramientas TECNOLÓGICAS?</p>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="pregUnoCA" id="pregUnoCA" value="10">
+                                                <label class="form-check-label" for="pregUnoCA">Equipos</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="pregUnoCB" id="pregUnoCB" value="10">
+                                                <label class="form-check-label" for="pregUnoCB"> Hardware</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="pregUnoCC" id="pregUnoCC" value="10">
+                                                <label class="form-check-label" for="pregUnoCC">Software</label>
+                                            </div>
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="checkbox" name="pregUnoCD" id="pregUnoCD" value="0">
+                                                <label for="pregUnoCD">No cuento con ninguno</label>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <label class="form-label" for="pregDosC">Servicios futuros: ¿Desea desarrollar NUEVAS LÍNEAS DE NEGOCIO?</label>
+                                            <select class="form-select" name="pregDosC" id="pregDosC" required>
+                                                <option selected disabled value>Seleccione Respuesta</option>
+                                                <option value="15">SI</option>
+                                                <option value="0">NO</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col my-2">
+                                        <label class="form-label" for="pregTresC">¿Cuenta usted con un PLAN DE MARKETING o ESTRATEGIA COMERCIAL?</label>
+                                            <select class="form-select" name="pregTresC" id="pregTresC" required>
+                                                <option selected disabled value>Seleccione Respuesta</option>
+                                                <option value="20">SI</option>
+                                                <option value="0">NO</option>
+                                            </select>
+                                        </div>
+                                        <div class="col my-2">
+                                            <label class="form-label" for="pregCuatroC">¿Realiza CAPACITACIONES MENSUALES al personal de su empresa?</label>
+                                            <select class="form-select" name="pregCuatroC" id="pregCuatroC" required>
+                                                <option selected disabled value>Seleccione Respuesta</option>
+                                                <option value="20">SI</option>
+                                                <option value="0">NO</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col mx-5">
+                                            <label class="form-label" for="pregCincoC">¿Conoce su COMPETENCIA? </label>
+                                            <select class="form-select" name="pregCincoC" id="pregCincoC" required>
+                                                <option selected disabled value>Seleccione Respuesta</option>
+                                                <option value="15">SI</option>
+                                                <option value="0">NO</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="d-grid gap-2 col-6 mx-auto mt-4">
+                                        <button type="submit" class="btn btn-outline-primary">Enviar</button>  
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div id="respuestaBloque3"></div>
+            </div>
+        </div>
+    </div>
+    <!--Modal Bloque 4-->
+    <div class="container">
+        <div class="row mt-4">
+            <div class="redondeado" style="background-color: rgb(152, 211, 253);">
+                <h4 class="mx-3"> BLOQUE 4 Identificación de procesos </h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-7">
+                <h5 class="px-3">En esta sección haremos preguntas sobre los procesos de su empresa.</h5>
+            </div>
+            <div class="col-3">
+                <button class="btn btn-outline-primary my-2" data-bs-toggle="modal" data-bs-target="#modalB4">
+                    Responder
+                </button>
+                <div class="modal fade" id="modalB4" tabindex="-1" aria-labelledby="labelModalB4" aria-hidden="true">
+                    <div class="modal-dialog modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="labelModalB4">BLOQUE 4</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <form id="datosBloqueIV" validated>
+                                    <div class="row">
+                                        <div class="col">
+                                            <label class="form-label" for="pregUnoD">¿Cuenta con sus ÁREA DEFINIDAS (ORGANIGRAMA)?</label>
+                                            <select class="form-select" name="pregUnoD" id="pregUnoD" required>
+                                                <option selected disabled value>Seleccione Respuesta</option>
+                                                <option value="60">SI</option>
+                                                <option value="0">NO</option>
+                                            </select>
+                                        </div>
+                                        <div class="col">
+                                            <label class="form-label" for="pregDosD">¿Cuenta con la DESCRIPCIÓN DE PUESTOS de su empresa?</label>
+                                            <select class="form-select" name="pregDosD" id="pregDosD" required>
+                                                <option selected disabled value>Seleccione Respuesta</option>
+                                                <option value="20">SI</option>
+                                                <option value="0">NO</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <label class="form-label" for="">¿Cuenta con sus PROCEDIMIENTOS DOCUMENTADOS?</label>
+                                            <select class="form-select" name="pregTresD" id="pregTresD" required>
+                                                <option selected disabled value>Seleccione Respuesta</option>
+                                                <option value="20">SI</option>
+                                                <option value="0">NO</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="d-grid gap-2 col-6 mx-auto mt-4">
+                                        <button type="submit" class="btn btn-outline-primary">Enviar</button>  
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2">
+                <div id="respuestaBloque4"></div>
+            </div>
+        </div>
+    </div>
+        <!--Datos del cliente-->
+        <!--Salida de datos-->
+        <div class="container my-4"> 
+            <div class="row" style="background-color:rgba(152, 211, 253);">
+                <div class="col">
+                    
+                    <div id="respuestaDosA"></div>
+                    <div id="respuestaTresA"></div>
+                </div>
+                <div class="col">
+                    <div id="respuestaCuatroA"></div>
+                    <div id="respuestaCincoA"></div>
+                    <div id="respuestaSeisA"></div>
+                </div>  
+            </div>
+        </div>        
+    </div>
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
